@@ -9,10 +9,10 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ]
     },
     /* Bundler mode */
@@ -25,13 +25,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
   ],
   "references": [
     {
