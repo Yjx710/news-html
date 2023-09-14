@@ -16,5 +16,15 @@ $black: #000;
   green: $green;
   blue: $blue;
   purple: $purple;
-  --header-color: none;
+}
+
+/* 默认亮色主题 */
+:root {
+  --header-bg-color: #fff;
+  --header-action-hover-bg-color: #F3F3F3;
+}
+/* 暗色主题 */
+html[data-theme='dark'] {
+  --header-bg-color: #000;
+  --header-action-hover-bg-color: #333;
 }
