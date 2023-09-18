@@ -16,6 +16,7 @@
         "src/*"
       ]
     },
+    "allowSyntheticDefaultImports": true,
     /* Bundler mode */
     "moduleResolution": "Node",
     "resolveJsonModule": true,
@@ -24,6 +25,7 @@
     "jsx": "preserve",
     /* Linting */
     "strict": true,
+    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
