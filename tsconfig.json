@@ -1,36 +1,40 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
+    "target": "ES2020", // 指定ts编译成ES的版本。
+    "useDefineForClassFields": true, // 此标志用作迁移到即将推出的类字段标准版本的一部分
+    "module": "ESNext", // // 生成的module的形式，esm，cmd，amd啥的
+    // // 指定要包含在编译中的库文件
     "lib": [
       "ES2020",
       "DOM",
       "DOM.Iterable",
       "ES6"
     ],
-    "skipLibCheck": true,
-    "baseUrl": "./",
+//    "skipLibCheck": true, // 是否跳过声明文件的类型检查
+    "baseUrl": "./", // 用于设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
+    // 用于设置模块名到基于baseUrl的路径映射
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
-    /* Bundler mode */
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    /* Linting */
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "allowSyntheticDefaultImports": true, // 用于允许从没有默认导出的模块中默认导入
+    "moduleResolution": "Node", // 用于选择模块解析策略 node/classic
+    "resolveJsonModule": true, // 是否解析 JSON 模块
+    "isolatedModules": true, // 将每个文件作为单独的模块
+    "noEmit": true, // 不生成输出文件。
+    "jsx": "preserve", // jsx用于的开发环境，preserve/react/RN
+    "strict": true, // 开启所有严格的类型检查
+    "noImplicitAny": true, // 不允许隐式的any类型
+    "noImplicitThis": true, // 不允许this有隐式的any类型
+    "strictNullChecks": true, // // 不允许把null、undefined赋值给其他类型的变量
+    "noUnusedLocals": true, // 若有未使用的局部变量则抛错。
+    "strictFunctionTypes": true, // 不允许函数参数双向协变
+    "noUnusedParameters": true, // 检查未使用的函数参数(只提示不报错)
+    "strictPropertyInitialization": true, // 类的实例属性必须初始化
+    "noFallthroughCasesInSwitch": true // 防止switch语句贯穿(即如果没有break语句后面不会执行)
   },
+  // 指定被编译文件所在的目录
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
@@ -38,9 +42,11 @@
     "src/**/*.vue",
     "./auto-imports.d.ts"
   ],
+  // 指定不需要被编译的目录
   "exclude": [
     "node_modules"
   ],
+  // 项目引用，是 TS 3.0 中的一项新功能，它允许将 TS 程序组织成更小的部分。 使用小技巧：在填写路径时 ** 表示任意目录， * 表示任意文件。
   "references": [
     {
       "path": "./tsconfig.node.json"
