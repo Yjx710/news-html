@@ -37,7 +37,7 @@
   // 指定被编译文件所在的目录
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
+    "./types/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "./auto-imports.d.ts"
