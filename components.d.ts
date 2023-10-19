@@ -32,7 +32,10 @@ declare module 'vue' {
     AppGitHup: typeof import('./src/components/Application/src/AppGitHup.vue')['default']
     AppLanguage: typeof import('./src/components/Application/src/AppLanguage.vue')['default']
     AppNotification: typeof import('./src/components/Application/src/AppNotification.vue')['default']
+    AppProvider: typeof import('./src/components/Application/src/AppProvider.vue')['default']
     AppSearch: typeof import('./src/components/Application/src/search/AppSearch.vue')['default']
+    AppSearchFooter: typeof import('./src/components/Application/src/search/AppSearchFooter.vue')['default']
+    AppSearchKeyItem: typeof import('./src/components/Application/src/search/AppSearchKeyItem.vue')['default']
     AppSearchModal: typeof import('./src/components/Application/src/search/AppSearchModal.vue')['default']
     AppShrinkIcon: typeof import('./src/components/Application/src/AppShrinkIcon.vue')['default']
     AppThemeMode: typeof import('./src/components/Application/src/AppThemeMode.vue')['default']
@@ -47,7 +50,9 @@ declare module 'vue' {
     ATable: typeof import('ant-design-vue/es')['Table']
     ATag: typeof import('ant-design-vue/es')['Tag']
     ATooltip: typeof import('ant-design-vue/es')['Tooltip']
+    Icon: typeof import('./src/components/Icon/Icon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./src/components/Icon/src/SvgIcon.vue')['default']
   }
 }
