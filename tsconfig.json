@@ -40,7 +40,8 @@
     "./types/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "./auto-imports.d.ts"
+    "./auto-imports.d.ts",
+    "./components.d.ts"
   ],
   // 指定不需要被编译的目录
   "exclude": [
